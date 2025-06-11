@@ -1,10 +1,11 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { LogsModule } from './logs/logs.module';
+import { BffDebuggerModule } from './bff-debugger/bff-debugger.module';
+import { DemoModule } from './demo/demo.module';
 
 @Module({
-  imports: [LogsModule],
+  imports: [BffDebuggerModule, DemoModule],
   controllers: [AppController],
   providers: [AppService],
 })
